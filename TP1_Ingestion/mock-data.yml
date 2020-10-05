@@ -1,0 +1,247 @@
+version: '3.7'
+services: 
+    moke_presence1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_presence1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 1
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"presence1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_presence1"
+        networks:
+            - iot-labs
+
+    moke_luminosity1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_luminosity1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 3000
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"luminosity1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_luminosity1"
+        networks:
+            - iot-labs
+
+    moke_light_activation1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_light_activation1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 1
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"light_activation1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_light_activation1"
+        networks:
+            - iot-labs
+
+    moke_temperature1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_temperature1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 15
+            MAX_VALUE: 25
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"temperature1","DATE":"date_now", "VALUE":"float"}'
+        tty: true
+        labels:
+            NAME: "moke_temperature1"
+        networks:
+            - iot-labs
+
+    moke_position1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_position1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: -180
+            MAX_VALUE: 180
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"position1","DATE":"date_now", "LONGITUDE":"float", "LATITUDE": "float"}'
+        tty: true
+        labels:
+            NAME: "moke_position1"
+        networks:
+            - iot-labs
+
+    moke_heater_mode1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_heater_mode1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 5
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"heater_mode1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_heater_mode1"
+        networks:
+            - iot-labs
+
+    moke_ac_activator1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_ac_activator1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 15
+            MAX_VALUE: 30
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"ac_activator","DATE":"date_now", "VALUE":"float"}'
+        tty: true
+        labels:
+            NAME: "moke_ac_activator1"
+        networks:
+            - iot-labs
+
+    moke_power_consumption1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_power_consumption1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 100
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"power_consumption1","DATE":"date_now", "VALUE":"float"}'
+        tty: true
+        labels:
+            NAME: "moke_power_consumption1"
+        networks:
+            - iot-labs
+
+    moke_energy_power1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_energy_power1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 100
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"energy_power1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_energy_power1"
+        networks:
+            - iot-labs
+
+    moke_shutter1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_shutter1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 100
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"shutter1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_shutter1"
+        networks:
+            - iot-labs
+
+    moke_shutter_position1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_shutter_position1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: client1batA
+            MIN_VALUE: 0
+            MAX_VALUE: 1
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"shutter_position1","DATE":"date_now", "VALUE":"integer"}'
+        tty: true
+        labels:
+            NAME: "moke_shutter_position1"
+        networks:
+            - iot-labs
+
+networks:
+    iot-labs:
+        external: true
