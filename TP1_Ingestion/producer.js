@@ -1,7 +1,7 @@
 var amqp = require('amqplib/callback_api');
 const credentials = require('./credentials');
 
-const QUEUE_NAME = process.argv[2] + process.argv[3];
+const QUEUE_NAME = process.argv[2] + "." +  process.argv[3];
 
 // On s'assure que tous les arguments ont correctement été passé afin de démarrer le process
 if (process.argv.length < 4) {

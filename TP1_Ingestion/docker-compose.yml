@@ -1,8 +1,8 @@
 version: '3.7'
 services:
-    rabbitmq1:
+    rabbitmq:
         image: "rabbitmq:3-management"
-        hostname: "rabbitmq1"
+        hostname: "rabbitmq"
         environment:
             RABBITMQ_ERLAND_COOKIE: "SWQOKODSQALRPCLNMEQG"
             RABBITMQ_DEFAULT_USER: "rabbitmq"
@@ -14,7 +14,7 @@ services:
         networks: 
             - iot-labs
         labels:
-            NAME: "rabbitmq1"
+            NAME: "rabbitmq"
 
 networks:
     iot-labs:
