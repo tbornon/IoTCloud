@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+        api:
+                build: ./out/python-ts-iot/
+                image: "ts_api"
+                hostname: "myapi"
+                ports:
+                        - "8080:8080"
+                networks:
+                        - iot-labs
+                labels:
+                        NAME: "myapi"
+
+networks:
+        iot-labs:
+                external: true
