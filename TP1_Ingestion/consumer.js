@@ -6,7 +6,7 @@ const PREFETCH_VALUE = 10;
 
 // On s'assure que tous les arguments ont correctement été passé afin de démarrer le process
 if (process.argv.length < 4) {
-    console.error("Usage : node producer.js [client_name] [building_name]")
+    console.error("Usage : node consumer.js [client_name] [building_name]")
     process.exit(-1);
 }
 

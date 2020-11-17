@@ -1,2 +1,2 @@
-use DVP_2020
-db.partners.find().limit(1).pretty()
+use iotcloud
+db.datas.find().limit(1).pretty()
