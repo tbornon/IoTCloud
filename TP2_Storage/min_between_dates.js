@@ -15,8 +15,9 @@ const DataSchema = new mongoose.Schema({
 const Data = mongoose.model('Data', DataSchema);
 mongoose.connect("mongodb://localhost:27017/iotcloud", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        let from = process.argv[3] || new Date(0);
-        let to = process.argv[4] || Date()
+        let from = process.argv[3] || new Date(0).toISOString();
+        let to = process.argv[4] || Date().toISOString();
+        
         return Data
             .find({
               sensorId: process.argv[2],
