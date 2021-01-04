@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    moke_temperature1:
+        image: "tbornon/mock-data-generator:latest"
+        hostname: "moke_temperature1"
+        environment:
+            SENZING_SUBCOMMAND: random-to-rabbitmq
+            SENZING_RANDOM_SEED: 1
+            SENZING_RECORD_MIN: 1
+            SENZING_RECORD_MAX: 10000
+            SENZING_RECORDS_PER_SECOND: 10
+            SENZING_RABBITMQ_HOST: rabbitmq
+            SENZING_RABBITMQ_PASSWORD: rabbitmq
+            SENZING_RABBITMQ_USERNAME: rabbitmq
+            SENZING_RABBITMQ_QUEUE: temperature
+            MIN_VALUE: 15
+            MAX_VALUE: 25
+            SENZING_DATA_TEMPLATE: '{"SENSOR":"temperature","DATE":"date_now", "VALUE":"float"}'
+        tty: true
+        labels:
+            NAME: "moke_temperature1"
+        networks:
+            - iot-labs
+
+networks:
+    iot-labs:
+        external: true
