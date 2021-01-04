@@ -7,12 +7,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 1
             SENZING_DATA_TEMPLATE: '{"SENSOR":"presence1","DATE":"date_now", "VALUE":"integer"}'
@@ -29,12 +29,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 3000
             SENZING_DATA_TEMPLATE: '{"SENSOR":"luminosity1","DATE":"date_now", "VALUE":"integer"}'
@@ -51,12 +51,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 1
             SENZING_DATA_TEMPLATE: '{"SENSOR":"light_activation1","DATE":"date_now", "VALUE":"integer"}'
@@ -73,12 +73,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 15
             MAX_VALUE: 25
             SENZING_DATA_TEMPLATE: '{"SENSOR":"temperature1","DATE":"date_now", "VALUE":"float"}'
@@ -95,12 +95,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: -180
             MAX_VALUE: 180
             SENZING_DATA_TEMPLATE: '{"SENSOR":"position1","DATE":"date_now", "LONGITUDE":"float", "LATITUDE": "float"}'
@@ -117,12 +117,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 5
             SENZING_DATA_TEMPLATE: '{"SENSOR":"heater_mode1","DATE":"date_now", "VALUE":"integer"}'
@@ -139,12 +139,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 15
             MAX_VALUE: 30
             SENZING_DATA_TEMPLATE: '{"SENSOR":"ac_activator","DATE":"date_now", "VALUE":"float"}'
@@ -161,12 +161,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 100
             SENZING_DATA_TEMPLATE: '{"SENSOR":"power_consumption1","DATE":"date_now", "VALUE":"float"}'
@@ -183,12 +183,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 100
             SENZING_DATA_TEMPLATE: '{"SENSOR":"energy_power1","DATE":"date_now", "VALUE":"integer"}'
@@ -205,12 +205,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 100
             SENZING_DATA_TEMPLATE: '{"SENSOR":"shutter1","DATE":"date_now", "VALUE":"integer"}'
@@ -227,12 +227,12 @@ services:
             SENZING_SUBCOMMAND: random-to-rabbitmq
             SENZING_RANDOM_SEED: 1
             SENZING_RECORD_MIN: 1
-            SENZING_RECORD_MAX: 10000
+            SENZING_RECORD_MAX: 100
             SENZING_RECORDS_PER_SECOND: 10
-            SENZING_RABBITMQ_HOST: rabbitmq1
+            SENZING_RABBITMQ_HOST: rabbitmq
             SENZING_RABBITMQ_PASSWORD: rabbitmq
             SENZING_RABBITMQ_USERNAME: rabbitmq
-            SENZING_RABBITMQ_QUEUE: client1batA
+            SENZING_RABBITMQ_QUEUE: client1.batA
             MIN_VALUE: 0
             MAX_VALUE: 1
             SENZING_DATA_TEMPLATE: '{"SENSOR":"shutter_position1","DATE":"date_now", "VALUE":"integer"}'
