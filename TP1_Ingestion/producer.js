@@ -1,4 +1,6 @@
+#!/usr/bin/node
 var amqp = require('amqplib/callback_api');
+const { bind } = require('bluebird');
 const credentials = require('./credentials');
 
 const QUEUE_NAME = process.argv[2] + "." +  process.argv[3];

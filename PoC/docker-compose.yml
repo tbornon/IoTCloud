@@ -1,0 +1,91 @@
+version: '3.7'
+services:
+    rabbitmq:
+        image: "rabbitmq:3-management"
+        hostname: "rabbitmq"
+        environment:
+            RABBITMQ_ERLAND_COOKIE: "SWQOKODSQALRPCLNMEQG"
+            RABBITMQ_DEFAULT_USER: "rabbitmq"
+            RABBITMQ_DEFAULT_PASS: "rabbitmq"
+            RABBITMQ_DEFAULT_VHOST: "/"
+        ports:
+            - "8082:15672"
+            - "5672:5672"
+        networks: 
+            - poc
+        labels:
+            NAME: "rabbitmq"
+
+    mongo:
+        image: mongo:4.2.0-bionic
+        hostname: "mongo"
+        restart: always
+        labels:
+            NAME: "mongo"
+        networks:
+            - poc
+        ports:
+            - 27017:27017
+
+    mongo-express:
+        image: mongo-express:0.49.0
+        hostname: "mongo_express"
+        restart: always
+        ports:
+            - 8081:8081
+        environment:
+            ME_CONFIG_MONGODB_SERVER: mongo
+        labels:
+            NAME: "mongo_express"
+        networks: 
+            - poc
+
+    nifi:
+        image: "apache/nifi:1.9.2"
+        hostname: "nifi"
+        environment: 
+            NIFI_WEB_HTTP_PORT: "8080"
+        ports:
+            - "8080:8080"
+        networks:
+            - poc
+        labels:
+            NAME: "nifi"
+
+    grafana:
+        image: "grafana/grafana"
+        hostname: "grafana"
+        environment:
+            GF_SECURITY_ADMIN_PASSWORD: "secret"
+        ports: 
+            - "8083:3000"
+        networks:
+            - poc
+        labels:
+            NAME: "grafana"
+            
+    influxdb:
+        image: "influxdb"
+        hostname: "influxdb"
+        ports:
+            - "8084:8086"
+        networks:
+            - poc
+        labels:
+            NAME: "influxdb"
+
+    influxdbchrono:
+        image: "chronograf"
+        hostname: "chronograf"
+        ports:
+            - "8085:8888"
+        networks:
+            - poc
+        labels:
+            NAME: "chronograf"
+        command: "--influxdb-url=http://influxdb:8086"
+
+  
+networks:
+    poc:
+        external: true

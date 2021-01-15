@@ -1,33 +1,5 @@
 version: '3.7'
 services:
-    rabbitmq:
-        image: "rabbitmq:3-management"
-        hostname: "rabbitmq"
-        environment:
-            RABBITMQ_ERLAND_COOKIE: "SWQOKODSQALRPCLNMEQG"
-            RABBITMQ_DEFAULT_USER: "rabbitmq"
-            RABBITMQ_DEFAULT_PASS: "rabbitmq"
-            RABBITMQ_DEFAULT_VHOST: "/"
-        ports:
-            - "15672:15672"
-            - "5672:5672"
-        networks: 
-            - iot-labs
-        labels:
-            NAME: "rabbitmq"
-
-    nifi:
-        image: "apache/nifi:1.9.2"
-        hostname: "nifi"
-        environment: 
-            NIFI_WEB_HTTP_PORT: "8080"
-        ports:
-            - "8080:8080"
-        networks:
-            - iot-labs
-        labels:
-            NAME: "nifi"
-
     influxdb:
         image: "influxdb"
         hostname: "influxdb"
